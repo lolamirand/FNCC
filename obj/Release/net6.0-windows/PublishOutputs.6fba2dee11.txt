@@ -1,0 +1,12 @@
+C:\Users\karen\Desktop\FNCCPUESTO\FNCC.exe
+C:\Users\karen\Desktop\FNCCPUESTO\FNCC.dll
+C:\Users\karen\Desktop\FNCCPUESTO\FNCC.deps.json
+C:\Users\karen\Desktop\FNCCPUESTO\FNCC.runtimeconfig.json
+C:\Users\karen\Desktop\FNCCPUESTO\FNCC.pdb
+C:\Users\karen\Desktop\FNCCPUESTO\Google.Protobuf.dll
+C:\Users\karen\Desktop\FNCCPUESTO\K4os.Compression.LZ4.dll
+C:\Users\karen\Desktop\FNCCPUESTO\K4os.Compression.LZ4.Streams.dll
+C:\Users\karen\Desktop\FNCCPUESTO\K4os.Hash.xxHash.dll
+C:\Users\karen\Desktop\FNCCPUESTO\MySql.Data.dll
+C:\Users\karen\Desktop\FNCCPUESTO\ZstdNet.dll
+C:\Users\karen\Desktop\FNCCPUESTO\BouncyCastle.Crypto.dll
