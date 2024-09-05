@@ -77,7 +77,7 @@ Public Class listadoProducto
 
                 Dim deleteQuery As String = "DELETE FROM `producto` WHERE `idProducto` = @idProducto"
 
-
+                '///////////////////////////////////////
                 Using command As New MySqlCommand(deleteQuery, connection)
                     ' Usar parámetros para pasar los valores de manera segura a la consulta.
                     command.Parameters.AddWithValue("@idProducto", idProducto)
