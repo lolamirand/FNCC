@@ -28,6 +28,7 @@ Public Class Login
 
             ' Iterar a través de los resultados
             If reader.HasRows() Then
+                ' Me.Close()
                 frmIngresar.Show()
 
             Else

@@ -70,10 +70,10 @@ Partial Class Login
         'lblAceptar
         '
         Me.lblAceptar.BackColor = System.Drawing.Color.Lime
-        Me.lblAceptar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblAceptar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.lblAceptar.Location = New System.Drawing.Point(318, 188)
         Me.lblAceptar.Name = "lblAceptar"
-        Me.lblAceptar.Size = New System.Drawing.Size(64, 24)
+        Me.lblAceptar.Size = New System.Drawing.Size(85, 46)
         Me.lblAceptar.TabIndex = 4
         Me.lblAceptar.Text = "Aceptar"
         Me.lblAceptar.UseVisualStyleBackColor = False
@@ -81,10 +81,10 @@ Partial Class Login
         'btnCancelar
         '
         Me.btnCancelar.BackColor = System.Drawing.Color.Red
-        Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnCancelar.Location = New System.Drawing.Point(234, 188)
+        Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnCancelar.Location = New System.Drawing.Point(211, 188)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(64, 24)
+        Me.btnCancelar.Size = New System.Drawing.Size(87, 46)
         Me.btnCancelar.TabIndex = 5
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
