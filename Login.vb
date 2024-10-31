@@ -39,7 +39,16 @@ Public Class Login
 
     End Sub
 
-    Private Sub txtContrasenia_TextChanged(sender As Object, e As EventArgs) Handles txtContrasenia.TextChanged
+    Private Sub txtContrasenia_KeyDown(sender As Object, e As KeyEventArgs) Handles txtContrasenia.KeyDown
 
+        ' Verifica si se ha presionado la tecla Enter
+        If e.KeyCode = Keys.Enter Then
+            ' Llama al evento del botón Aceptar
+            lblAceptar.PerformClick()
+            ' Evita el sonido de "ding" al presionar Enter
+            e.SuppressKeyPress = True
+        End If
     End Sub
+
+
 End Class
