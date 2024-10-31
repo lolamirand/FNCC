@@ -56,7 +56,7 @@ Partial Class Login
         Me.txtUsuario.Location = New System.Drawing.Point(262, 109)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(106, 20)
-        Me.txtUsuario.TabIndex = 2
+        Me.txtUsuario.TabIndex = 1
         '
         'txtContrasenia
         '
@@ -64,14 +64,14 @@ Partial Class Login
         Me.txtContrasenia.Name = "txtContrasenia"
         Me.txtContrasenia.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtContrasenia.Size = New System.Drawing.Size(106, 20)
-        Me.txtContrasenia.TabIndex = 3
+        Me.txtContrasenia.TabIndex = 2
         Me.txtContrasenia.UseSystemPasswordChar = True
         '
         'lblAceptar
         '
         Me.lblAceptar.BackColor = System.Drawing.Color.Lime
         Me.lblAceptar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lblAceptar.Location = New System.Drawing.Point(318, 188)
+        Me.lblAceptar.Location = New System.Drawing.Point(319, 200)
         Me.lblAceptar.Name = "lblAceptar"
         Me.lblAceptar.Size = New System.Drawing.Size(85, 46)
         Me.lblAceptar.TabIndex = 4
@@ -82,7 +82,7 @@ Partial Class Login
         '
         Me.btnCancelar.BackColor = System.Drawing.Color.Red
         Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnCancelar.Location = New System.Drawing.Point(211, 188)
+        Me.btnCancelar.Location = New System.Drawing.Point(191, 200)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(87, 46)
         Me.btnCancelar.TabIndex = 5
