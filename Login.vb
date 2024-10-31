@@ -28,9 +28,8 @@ Public Class Login
 
             ' Iterar a través de los resultados
             If reader.HasRows() Then
-                ' Me.Close()
+                Me.Hide()
                 frmIngresar.Show()
-
             Else
                 MessageBox.Show("usuario o contraseña invalida")
             End If

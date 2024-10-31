@@ -30,7 +30,9 @@ Public Class frmProducto
             pbImagen.Image = Image.FromFile(rutaImagen)
 
             ' Guarda la imagen en una ubicación específica (puedes personalizar la ruta)
-            nuevaRuta = "C:\Users\karen\source\repos\FNCC\Imagenes\" & Path.GetFileName(rutaImagen)
+            'nuevaRuta = "C:\Users\karen\source\repos\FNCC\Imagenes\" & Path.GetFileName(rutaImagen)
+
+            nuevaRuta = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyPictures), Path.GetFileName(rutaImagen))
             File.Copy(rutaImagen, nuevaRuta, True)
             txtFoto.Text = nuevaRuta
             ' Aquí puedes guardar la ruta de la imagen en tu base de datos junto con otros detalles del producto
@@ -81,7 +83,7 @@ Public Class frmProducto
                 If rowsAffected > 0 Then
                     MessageBox.Show("Datos editados correctamente.")
                     Me.Close()
-                    listadoProducto.Show() 
+                    listadoProducto.Show()
                 Else
                     MessageBox.Show("Error al editar los datos.")
                 End If
@@ -104,6 +106,10 @@ Public Class frmProducto
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub txtFoto_TextChanged(sender As Object, e As EventArgs) Handles txtFoto.TextChanged
 
     End Sub
 End Class
