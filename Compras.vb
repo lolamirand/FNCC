@@ -105,7 +105,7 @@ Public Class frmCompras
         End If
 
         txtBoxPrecio.Text = CInt(textBoxCantidad.Text) * precioProducto
-0If Integer.TryParse(txtBoxPrecio.Text, precioEntero) Then
+        If Integer.TryParse(txtBoxPrecio.Text, precioEntero) Then
             If Integer.TryParse(txtCompraTotal.Text, totalEntero) Then
                 txtCompraTotal.Text = totalEntero + precioEntero
             Else
