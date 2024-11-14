@@ -11,6 +11,7 @@ Imports System.Drawing
 Public Class frmCompras
     Dim connection As MySqlConnection = GetConnection()
     Dim precioEntero, totalEntero As Integer
+    Dim varCompraTotal As Integer
 
     Private Sub Compras_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim varx, vary As Integer
@@ -37,6 +38,7 @@ Public Class frmCompras
             Me.panelComprar.Controls.Add(precio)
 
             Dim precioTotal As New TextBox
+
             precioTotal.SetBounds(varx + 400, vary, 60, 20)
             ' precioTotal.Text = CInt(precio.Text) * CInt(cantidad.Text)
             Me.panelComprar.Controls.Add(precioTotal)
@@ -48,11 +50,11 @@ Public Class frmCompras
             cantidad.SetBounds(varx + 300, vary, 60, 20)
             cantidad.Text = 0
             Me.panelComprar.Controls.Add(cantidad)
-            AddHandler cantidad.TextChanged, Sub(senderObj, eventArgs) ModificarValor(cantidad, precioTotal, fila("precio"), compraTotal)
+            AddHandler cantidad.TextChanged, Sub(senderObj, eventArgs) ModificarValor(cantidad, precioTotal, fila("precio"), varCompraTotal)
 
             Dim btnImagen As New Button
             btnImagen.SetBounds(varx, vary, 60, 40)
-            AddHandler btnImagen.Click, Sub(senderObj, eventArgs) IncrementarValor(cantidad, precioTotal, fila("precio"), compraTotal)
+            AddHandler btnImagen.Click, Sub(senderObj, eventArgs) IncrementarValor(cantidad, precioTotal, fila("precio"), varCompraTotal)
             ' Asignar la imagen al botón
             If fila("foto") <> Nothing Then
                 btnImagen.BackgroundImage = Image.FromFile(fila("foto"))
@@ -64,18 +66,17 @@ Public Class frmCompras
 
         Next
 
+        actualizarCompraTotal(varCompraTotal)
 
         compraTotal.SetBounds(varx + 400, vary, 60, 20)
+        compraTotal.Text = varCompraTotal
         Me.panelComprar.Controls.Add(compraTotal)
 
     End Sub
 
-    Private Sub btnImagen_Click(sender As Object, e As EventArgs)
-        MessageBox.Show("¡Botón dinámico clickeado!")
-    End Sub
 
     ' Método para incrementar el valor del TextBox asociado al botón
-    Private Sub IncrementarValor(textBoxCantidad As TextBox, txtBoxPrecio As TextBox, precioProducto As Integer, txtCompraTotal As TextBox)
+    Private Sub IncrementarValor(textBoxCantidad As TextBox, txtBoxPrecio As TextBox, precioProducto As Integer, varCompraTotal As Integer)
         ' Convertir el valor actual del TextBox a un número
         Dim currentValue As Integer
         If Integer.TryParse(textBoxCantidad.Text, currentValue) Then
@@ -86,14 +87,15 @@ Public Class frmCompras
             textBoxCantidad.Text = "1"
         End If
         txtBoxPrecio.Text = CInt(textBoxCantidad.Text) * precioProducto
-        If Integer.TryParse(txtCompraTotal.Text, totalEntero) Then
-            txtCompraTotal.Text = totalEntero + precioEntero
-        Else
-            txtCompraTotal.Text = 0 + precioEntero
-        End If
+        '        actualizarCompraTotal(varCompraTotal)
+        'If Integer.TryParse(txtCompraTotal.Text, totalEntero) Then
+        '    txtCompraTotal.Text = totalEntero + precioEntero
+        'Else
+        '    txtCompraTotal.Text = 0 + precioEntero
+        'End If
     End Sub
 
-    Private Sub ModificarValor(textBoxCantidad As TextBox, txtBoxPrecio As TextBox, precioProducto As Integer, txtCompraTotal As TextBox)
+    Private Sub ModificarValor(textBoxCantidad As TextBox, txtBoxPrecio As TextBox, precioProducto As Integer, varCompraTotal As Integer)
         ' Convertir el valor actual del TextBox a un número
         Dim currentValue As Integer
         If Integer.TryParse(textBoxCantidad.Text, currentValue) Then
@@ -105,15 +107,32 @@ Public Class frmCompras
         End If
 
         txtBoxPrecio.Text = CInt(textBoxCantidad.Text) * precioProducto
-        If Integer.TryParse(txtBoxPrecio.Text, precioEntero) Then
-            If Integer.TryParse(txtCompraTotal.Text, totalEntero) Then
-                txtCompraTotal.Text = totalEntero + precioEntero
-            Else
-                txtCompraTotal.Text = 0 + precioEntero
-            End If
-        End If
+
+        'If Integer.TryParse(txtBoxPrecio.Text, precioEntero) Then
+        '    If Integer.TryParse(txtCompraTotal.Text, totalEntero) Then
+        '        txtCompraTotal.Text = totalEntero + precioEntero
+        '    Else
+        '        txtCompraTotal.Text = 0 + precioEntero
+        '    End If
+        'End If
     End Sub
 
+    Private Sub actualizarCompraTotal(varCompraTotal As Integer)
+        Dim totalProducto, totalCompra As Integer
+        For Each fila As Control In panelComprar.Controls
+            If TypeOf fila Is Panel Then
+                For Each columna As Control In fila.Controls
+                    If TypeOf columna Is TextBox Then
+                        totalProducto = CType(columna, TextBox).Text
+                        totalCompra = totalCompra + totalProducto
+                    End If
+
+                Next
+            End If
+        Next
+        varCompraTotal = totalCompra
+
+    End Sub
 
     Private Sub panelComprar_Paint(sender As Object, e As PaintEventArgs) Handles panelComprar.Paint
 
