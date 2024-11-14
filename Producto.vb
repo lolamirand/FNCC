@@ -101,13 +101,7 @@ Public Class frmProducto
         'stockAnterior = CInt(txtStock.Text)
     End Sub
 
-    Private Sub txtIdProducto_TextChanged(sender As Object, e As EventArgs) Handles txtIdProducto.TextChanged
 
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
 
     Private Sub txtFoto_TextChanged(sender As Object, e As EventArgs) Handles txtFoto.TextChanged
 
