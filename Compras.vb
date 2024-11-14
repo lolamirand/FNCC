@@ -46,6 +46,8 @@ Public Class frmCompras
             '    totalCompra = totalCompra + precioEntero
             'End If
 
+            AddHandler precioTotal.TextChanged, Sub(senderObj, eventArgs) actualizarCompraTotal(varCompraTotal)
+
             Dim cantidad As New TextBox
             cantidad.SetBounds(varx + 300, vary, 60, 20)
             cantidad.Text = 0
@@ -66,7 +68,7 @@ Public Class frmCompras
 
         Next
 
-        actualizarCompraTotal(varCompraTotal)
+
 
         compraTotal.SetBounds(varx + 400, vary, 60, 20)
         compraTotal.Text = varCompraTotal
@@ -93,6 +95,7 @@ Public Class frmCompras
         'Else
         '    txtCompraTotal.Text = 0 + precioEntero
         'End If
+        actualizarCompraTotal(varCompraTotal)
     End Sub
 
     Private Sub ModificarValor(textBoxCantidad As TextBox, txtBoxPrecio As TextBox, precioProducto As Integer, varCompraTotal As Integer)
@@ -115,21 +118,42 @@ Public Class frmCompras
         '        txtCompraTotal.Text = 0 + precioEntero
         '    End If
         'End If
+        actualizarCompraTotal(varCompraTotal)
     End Sub
 
     Private Sub actualizarCompraTotal(varCompraTotal As Integer)
         Dim totalProducto, totalCompra As Integer
-        For Each fila As Control In panelComprar.Controls
-            If TypeOf fila Is Panel Then
-                For Each columna As Control In fila.Controls
-                    If TypeOf columna Is TextBox Then
-                        totalProducto = CType(columna, TextBox).Text
-                        totalCompra = totalCompra + totalProducto
-                    End If
+        totalCompra = 0
+        totalProducto = 0
+        If panelComprar.Controls.Count = 0 Then
+            MessageBox.Show("No hay controles en panelComprar.")
+            Return
+        End If
+        '  For Each fila As Control In panelComprar.Controls
+        ' If TypeOf fila Is Panel Then
+        '  For Each columna As Control In fila.Controls
+        ' If TypeOf columna Is TextBox Then
+        ' totalProducto = CType(columna, TextBox).Text
+        'totalCompra = totalCompra + totalProducto
+        'f
 
-                Next
+        'Next
+        ' End If
+        ' Next
+        For Each control As Control In panelComprar.Controls
+            ' Verificar si el control es un TextBox
+            If TypeOf control Is TextBox AndAlso control.Name.StartsWith("precioTotal") Then
+                Dim txt As TextBox = CType(control, TextBox)
+                ' Intentar convertir el texto del TextBox a Integer
+                If Integer.TryParse(txt.Text, totalProducto) Then
+                    ' Si es válido, sumar al totalCompra
+                    totalCompra += totalProducto
+                Else
+                    totalProducto = 0
+                End If
             End If
         Next
+
         varCompraTotal = totalCompra
 
     End Sub
