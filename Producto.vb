@@ -70,8 +70,6 @@ Public Class frmProducto
 
             Dim updateQuery As String = "UPDATE `producto` SET `nombre`=@nombre, `precio`=@precio, `stock`=@stock WHERE `idProducto`=@idProducto"
 
-
-
             Using command As New MySqlCommand(updateQuery, connection)
                 command.Parameters.AddWithValue("@idProducto", txtIdProducto.Text)
                 command.Parameters.AddWithValue("@nombre", txtNombre.Text)
