@@ -5,8 +5,7 @@ Imports System.Net ' Para descargar la imagen desde la URL
 Imports System.Net.Http
 Imports System.IO
 Imports System.Drawing
-
-
+Imports Org.BouncyCastle.Math.EC
 
 Public Class frmCompras
     Dim connection As MySqlConnection = GetConnection()
@@ -30,13 +29,16 @@ Public Class frmCompras
         For Each fila As DataRow In dataTable.Rows
             Dim precio As New TextBox
             precio.SetBounds(varx + 200, vary, 60, 20)
-            precio.Text = String.Format("${0:0,0.00}", fila("precio"))
+            precio.TextAlign = HorizontalAlignment.Right
+            precio.Text = CInt(fila("precio")).ToString("F2")
             precio.Enabled = False
             Me.panelComprar.Controls.Add(precio)
 
             Dim precioTotal As New TextBox
             precioTotal.SetBounds(varx + 400, vary, 60, 20)
             precioTotal.Name = "precioTotal"
+            precioTotal.TextAlign = HorizontalAlignment.Right
+
 
             Me.panelComprar.Controls.Add(precioTotal)
             AddHandler precioTotal.TextChanged, Sub(senderObj, eventArgs) actualizarCompraTotal()
@@ -68,6 +70,9 @@ Public Class frmCompras
             ' Configurar las propiedades del TextBox
             compraTotal.Name = "compraTotal"
             compraTotal.SetBounds(varx + 400, vary, 60, 20)
+            ' Configurar la alineación del texto a la derecha
+            compraTotal.TextAlign = HorizontalAlignment.Right
+
             Me.panelComprar.Controls.Add(compraTotal)
         End If
 
@@ -86,7 +91,7 @@ Public Class frmCompras
             ' Si el valor no es un número, lo reiniciamos a 1
             textBoxCantidad.Text = "1"
         End If
-        txtBoxPrecio.Text = CInt(textBoxCantidad.Text) * precioProducto
+        txtBoxPrecio.Text = (CInt(textBoxCantidad.Text) * precioProducto).ToString("F2")
         actualizarCompraTotal()
 
     End Sub
@@ -102,13 +107,13 @@ Public Class frmCompras
             textBoxCantidad.Text = "1"
         End If
 
-        txtBoxPrecio.Text = CInt(textBoxCantidad.Text) * precioProducto
+        txtBoxPrecio.Text = (CInt(textBoxCantidad.Text) * precioProducto).ToString("F2")
         actualizarCompraTotal()
 
     End Sub
 
     Private Sub actualizarCompraTotal()
-        Dim totalProducto, totalCompra As Integer
+        Dim totalProducto, totalCompra As Decimal
         totalCompra = 0
         totalProducto = 0
         If panelComprar.Controls.Count = 0 Then
@@ -121,7 +126,8 @@ Public Class frmCompras
             If TypeOf control Is TextBox AndAlso control.Name.StartsWith("precioTotal") Then
                 Dim txt As TextBox = CType(control, TextBox)
                 ' Intentar convertir el texto del TextBox a Integer
-                If Integer.TryParse(txt.Text, totalProducto) Then
+
+                If Decimal.TryParse(txt.Text.Replace(",", "."), totalProducto) Then
                     ' Si es válido, sumar al totalCompra
                     totalCompra += totalProducto
                 Else
@@ -131,7 +137,7 @@ Public Class frmCompras
         Next
 
         If compraTotal IsNot Nothing Then
-            compraTotal.Text = totalCompra
+            compraTotal.Text = (totalCompra).ToString("F2")
         End If
 
 
