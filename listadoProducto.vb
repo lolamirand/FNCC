@@ -57,6 +57,8 @@ Public Class listadoProducto
         'DataGridView1.Columns.Add("Precio", "Precio")
         'DataGridView1.Columns.Add("Stock", "Stock")
         DataGridView1.DataSource = dataTable
+        DataGridView1.AllowUserToAddRows = False
+
         Dim ColCheck As DataGridViewCheckBoxColumn = New DataGridViewCheckBoxColumn()
         ColCheck.Name = "Opciones"
         Me.DataGridView1.Columns.Add(ColCheck)
@@ -120,6 +122,10 @@ Public Class listadoProducto
                 frmProducto.Show()
             End If
         Next
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
     End Sub
 End Class
 

@@ -46,7 +46,29 @@ Public Class frmProducto
             connection.Open()
         End If
         If btnGuardar.Text = "Guardar" Then
+            If txtNombre.Text = "" Then
+                MessageBox.Show("Por favor ingrese el nombre")
+                txtNombre.Focus()
+                Exit Sub
+            End If
 
+            If txtStock.Text = "" Then
+                MessageBox.Show("Por favor ingrese el stock")
+                txtStock.Focus()
+                Exit Sub
+            End If
+
+            If txtPrecio.Text = "" Then
+                MessageBox.Show("Por favor ingrese precio")
+                txtPrecio.Focus()
+                Exit Sub
+            End If
+
+            If txtFoto.Text = "" Then
+                MessageBox.Show("Por favor ingrese la foto")
+                txtFoto.Focus()
+                Exit Sub
+            End If
             Dim insertQuery As String = "INSERT INTO `producto`( `nombre`, `precio`, `stock`, `foto`) VALUES (@nombre,@precio,@stock,@foto)"
             Using command As New MySqlCommand(insertQuery, connection)
                 ' Usar parámetros para pasar los valores de manera segura a la consulta.
@@ -67,6 +89,29 @@ Public Class frmProducto
             End Using
 
         ElseIf btnGuardar.Text = "Editar" Then
+            If txtNombre.Text = "" Then
+                MessageBox.Show("Por favor ingrese el nombre")
+                txtNombre.Focus()
+                Exit Sub
+            End If
+
+            If txtStock.Text = "" Then
+                MessageBox.Show("Por favor ingrese el stock")
+                txtStock.Focus()
+                Exit Sub
+            End If
+
+            If txtPrecio.Text = "" Then
+                MessageBox.Show("Por favor ingrese precio")
+                txtPrecio.Focus()
+                Exit Sub
+            End If
+
+            If txtFoto.Text = "" Then
+                MessageBox.Show("Por favor ingrese la foto")
+                txtFoto.Focus()
+                Exit Sub
+            End If
 
             Dim updateQuery As String = "UPDATE `producto` SET `nombre`=@nombre, `precio`=@precio, `stock`=@stock WHERE `idProducto`=@idProducto"
 
@@ -96,6 +141,8 @@ Public Class frmProducto
     Private Sub frmProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim connection As MySqlConnection = GetConnection()
         connection.Open()
+        txtFoto.Enabled = False
+
         'stockAnterior = CInt(txtStock.Text)
     End Sub
 

@@ -82,6 +82,7 @@ Partial Class listadoProducto
         Me.Controls.Add(Me.BtnNuevoProducto)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "listadoProducto"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "listadoProducto"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

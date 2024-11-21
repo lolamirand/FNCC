@@ -36,7 +36,7 @@ Partial Class frmUsuario
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(283, 130)
+        Me.Label2.Location = New System.Drawing.Point(249, 142)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(92, 21)
         Me.Label2.TabIndex = 9
@@ -46,7 +46,7 @@ Partial Class frmUsuario
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(308, 80)
+        Me.Label1.Location = New System.Drawing.Point(274, 100)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(67, 21)
         Me.Label1.TabIndex = 8
@@ -54,7 +54,7 @@ Partial Class frmUsuario
         '
         'txtContrasenia
         '
-        Me.txtContrasenia.Location = New System.Drawing.Point(388, 128)
+        Me.txtContrasenia.Location = New System.Drawing.Point(362, 140)
         Me.txtContrasenia.Name = "txtContrasenia"
         Me.txtContrasenia.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtContrasenia.Size = New System.Drawing.Size(100, 23)
@@ -63,29 +63,31 @@ Partial Class frmUsuario
         '
         'txtUsuario
         '
-        Me.txtUsuario.Location = New System.Drawing.Point(388, 80)
+        Me.txtUsuario.Location = New System.Drawing.Point(362, 100)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(100, 23)
         Me.txtUsuario.TabIndex = 6
         '
         'btnCancelar
         '
-        Me.btnCancelar.BackColor = System.Drawing.Color.Red
-        Me.btnCancelar.Font = New System.Drawing.Font("Arial", 11.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnCancelar.Location = New System.Drawing.Point(275, 175)
+        Me.btnCancelar.BackColor = System.Drawing.Color.MidnightBlue
+        Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnCancelar.Location = New System.Drawing.Point(249, 196)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(100, 37)
+        Me.btnCancelar.Size = New System.Drawing.Size(100, 40)
         Me.btnCancelar.TabIndex = 29
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'btnGuardar
         '
-        Me.btnGuardar.BackColor = System.Drawing.Color.Lime
-        Me.btnGuardar.Font = New System.Drawing.Font("Arial", 11.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnGuardar.Location = New System.Drawing.Point(388, 175)
+        Me.btnGuardar.BackColor = System.Drawing.Color.MidnightBlue
+        Me.btnGuardar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnGuardar.Location = New System.Drawing.Point(362, 196)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(100, 37)
+        Me.btnGuardar.Size = New System.Drawing.Size(100, 40)
         Me.btnGuardar.TabIndex = 28
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = False
@@ -101,11 +103,12 @@ Partial Class frmUsuario
         'lblTitulo
         '
         Me.lblTitulo.AutoSize = True
-        Me.lblTitulo.Location = New System.Drawing.Point(388, 25)
+        Me.lblTitulo.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblTitulo.Location = New System.Drawing.Point(296, 35)
         Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(41, 15)
+        Me.lblTitulo.Size = New System.Drawing.Size(110, 32)
         Me.lblTitulo.TabIndex = 31
-        Me.lblTitulo.Text = "Label3"
+        Me.lblTitulo.Text = "SIGN UP"
         '
         'frmUsuario
         '
