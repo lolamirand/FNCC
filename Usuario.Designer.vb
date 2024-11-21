@@ -22,113 +22,109 @@ Partial Class frmUsuario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtContrasenia = New System.Windows.Forms.TextBox()
-        Me.txtUsuario = New System.Windows.Forms.TextBox()
-        Me.btnCancelar = New System.Windows.Forms.Button()
-        Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.TxtIdUsuario = New System.Windows.Forms.TextBox()
-        Me.lblTitulo = New System.Windows.Forms.Label()
-        Me.SuspendLayout()
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(249, 142)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(92, 21)
-        Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Contraseña:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(274, 100)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(67, 21)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Usuario:"
-        '
-        'txtContrasenia
-        '
-        Me.txtContrasenia.Location = New System.Drawing.Point(362, 140)
-        Me.txtContrasenia.Name = "txtContrasenia"
-        Me.txtContrasenia.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtContrasenia.Size = New System.Drawing.Size(100, 23)
-        Me.txtContrasenia.TabIndex = 7
-        Me.txtContrasenia.UseSystemPasswordChar = True
-        '
-        'txtUsuario
-        '
-        Me.txtUsuario.Location = New System.Drawing.Point(362, 100)
-        Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(100, 23)
-        Me.txtUsuario.TabIndex = 6
-        '
-        'btnCancelar
-        '
-        Me.btnCancelar.BackColor = System.Drawing.Color.MidnightBlue
-        Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnCancelar.Location = New System.Drawing.Point(249, 196)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(100, 40)
-        Me.btnCancelar.TabIndex = 29
-        Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = False
-        '
-        'btnGuardar
-        '
-        Me.btnGuardar.BackColor = System.Drawing.Color.MidnightBlue
-        Me.btnGuardar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnGuardar.Location = New System.Drawing.Point(362, 196)
-        Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(100, 40)
-        Me.btnGuardar.TabIndex = 28
-        Me.btnGuardar.Text = "Guardar"
-        Me.btnGuardar.UseVisualStyleBackColor = False
-        '
-        'TxtIdUsuario
-        '
-        Me.TxtIdUsuario.Location = New System.Drawing.Point(585, 25)
-        Me.TxtIdUsuario.Name = "TxtIdUsuario"
-        Me.TxtIdUsuario.Size = New System.Drawing.Size(100, 23)
-        Me.TxtIdUsuario.TabIndex = 30
-        Me.TxtIdUsuario.Visible = False
-        '
-        'lblTitulo
-        '
-        Me.lblTitulo.AutoSize = True
-        Me.lblTitulo.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lblTitulo.Location = New System.Drawing.Point(296, 35)
-        Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(110, 32)
-        Me.lblTitulo.TabIndex = 31
-        Me.lblTitulo.Text = "SIGN UP"
-        '
-        'frmUsuario
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.lblTitulo)
-        Me.Controls.Add(Me.TxtIdUsuario)
-        Me.Controls.Add(Me.btnCancelar)
-        Me.Controls.Add(Me.btnGuardar)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtContrasenia)
-        Me.Controls.Add(Me.txtUsuario)
-        Me.Name = "frmUsuario"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmUsuario"
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
+        Label2 = New Label()
+        Label1 = New Label()
+        txtContrasenia = New TextBox()
+        txtUsuario = New TextBox()
+        btnCancelar = New Button()
+        btnGuardar = New Button()
+        TxtIdUsuario = New TextBox()
+        lblTitulo = New Label()
+        SuspendLayout()
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Label2.Location = New Point(178, 155)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(92, 21)
+        Label2.TabIndex = 9
+        Label2.Text = "Contraseña:"' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Label1.Location = New Point(203, 113)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(67, 21)
+        Label1.TabIndex = 8
+        Label1.Text = "Usuario:"' 
+        ' txtContrasenia
+        ' 
+        txtContrasenia.Location = New Point(291, 153)
+        txtContrasenia.Name = "txtContrasenia"
+        txtContrasenia.PasswordChar = "*"c
+        txtContrasenia.Size = New Size(100, 23)
+        txtContrasenia.TabIndex = 7
+        txtContrasenia.UseSystemPasswordChar = True
+        ' 
+        ' txtUsuario
+        ' 
+        txtUsuario.Location = New Point(291, 113)
+        txtUsuario.Name = "txtUsuario"
+        txtUsuario.Size = New Size(100, 23)
+        txtUsuario.TabIndex = 6
+        ' 
+        ' btnCancelar
+        ' 
+        btnCancelar.BackColor = Color.MidnightBlue
+        btnCancelar.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        btnCancelar.ForeColor = SystemColors.ButtonFace
+        btnCancelar.Location = New Point(178, 209)
+        btnCancelar.Name = "btnCancelar"
+        btnCancelar.Size = New Size(100, 40)
+        btnCancelar.TabIndex = 29
+        btnCancelar.Text = "Cancelar"
+        btnCancelar.UseVisualStyleBackColor = False
+        ' 
+        ' btnGuardar
+        ' 
+        btnGuardar.BackColor = Color.MidnightBlue
+        btnGuardar.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        btnGuardar.ForeColor = SystemColors.ButtonFace
+        btnGuardar.Location = New Point(291, 209)
+        btnGuardar.Name = "btnGuardar"
+        btnGuardar.Size = New Size(100, 40)
+        btnGuardar.TabIndex = 28
+        btnGuardar.Text = "Guardar"
+        btnGuardar.UseVisualStyleBackColor = False
+        ' 
+        ' TxtIdUsuario
+        ' 
+        TxtIdUsuario.Location = New Point(493, 12)
+        TxtIdUsuario.Name = "TxtIdUsuario"
+        TxtIdUsuario.Size = New Size(100, 23)
+        TxtIdUsuario.TabIndex = 30
+        TxtIdUsuario.Visible = False
+        ' 
+        ' lblTitulo
+        ' 
+        lblTitulo.AutoSize = True
+        lblTitulo.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point)
+        lblTitulo.Location = New Point(225, 48)
+        lblTitulo.Name = "lblTitulo"
+        lblTitulo.Size = New Size(110, 32)
+        lblTitulo.TabIndex = 31
+        lblTitulo.Text = "SIGN UP"' 
+        ' frmUsuario
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(605, 322)
+        Controls.Add(lblTitulo)
+        Controls.Add(TxtIdUsuario)
+        Controls.Add(btnCancelar)
+        Controls.Add(btnGuardar)
+        Controls.Add(Label2)
+        Controls.Add(Label1)
+        Controls.Add(txtContrasenia)
+        Controls.Add(txtUsuario)
+        Name = "frmUsuario"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Usuario"
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label

@@ -31,7 +31,7 @@ Public Class Login
                 Me.Hide()
                 frmIngresar.Show()
             Else
-                MessageBox.Show("usuario o contraseña invalida")
+                MessageBox.Show("Usuario o contraseña incorrectos")
             End If
             reader.Close()
         End Using
@@ -51,5 +51,9 @@ Public Class Login
 
     Private Sub txtUsuario_TextChanged(sender As Object, e As EventArgs) Handles txtUsuario.TextChanged
 
+    End Sub
+
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        Me.Close()
     End Sub
 End Class

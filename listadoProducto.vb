@@ -5,8 +5,8 @@ Public Class listadoProducto
 
     Dim connection As MySqlConnection = GetConnection()
     Private Sub BtnNuevoProducto_Click(sender As Object, e As EventArgs) Handles BtnNuevoProducto.Click
-        Me.Close()
         frmProducto.Show()
+        Me.Close()
     End Sub
 
     ' Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
@@ -58,6 +58,7 @@ Public Class listadoProducto
         'DataGridView1.Columns.Add("Stock", "Stock")
         DataGridView1.DataSource = dataTable
         DataGridView1.AllowUserToAddRows = False
+        DataGridView1.Columns(0).Visible = False
 
         Dim ColCheck As DataGridViewCheckBoxColumn = New DataGridViewCheckBoxColumn()
         ColCheck.Name = "Opciones"
@@ -123,11 +124,8 @@ Public Class listadoProducto
             End If
         Next
     End Sub
-
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
-    End Sub
 End Class
+
 
 
 

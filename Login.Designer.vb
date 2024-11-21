@@ -22,106 +22,102 @@ Partial Class Login
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.lbl_Nombre = New System.Windows.Forms.Label()
-        Me.lbl_contrasenia = New System.Windows.Forms.Label()
-        Me.txtUsuario = New System.Windows.Forms.TextBox()
-        Me.txtContrasenia = New System.Windows.Forms.TextBox()
-        Me.lblAceptar = New System.Windows.Forms.Button()
-        Me.btnCancelar = New System.Windows.Forms.Button()
-        Me.lbl_login = New System.Windows.Forms.Label()
-        Me.SuspendLayout()
-        '
-        'lbl_Nombre
-        '
-        Me.lbl_Nombre.AutoSize = True
-        Me.lbl_Nombre.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbl_Nombre.Location = New System.Drawing.Point(205, 98)
-        Me.lbl_Nombre.Name = "lbl_Nombre"
-        Me.lbl_Nombre.Size = New System.Drawing.Size(67, 21)
-        Me.lbl_Nombre.TabIndex = 0
-        Me.lbl_Nombre.Text = "Usuario:"
-        '
-        'lbl_contrasenia
-        '
-        Me.lbl_contrasenia.AutoSize = True
-        Me.lbl_contrasenia.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbl_contrasenia.Location = New System.Drawing.Point(180, 138)
-        Me.lbl_contrasenia.Name = "lbl_contrasenia"
-        Me.lbl_contrasenia.Size = New System.Drawing.Size(92, 21)
-        Me.lbl_contrasenia.TabIndex = 1
-        Me.lbl_contrasenia.Text = "Contraseña:"
-        '
-        'txtUsuario
-        '
-        Me.txtUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtUsuario.Location = New System.Drawing.Point(292, 97)
-        Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(106, 22)
-        Me.txtUsuario.TabIndex = 1
-        '
-        'txtContrasenia
-        '
-        Me.txtContrasenia.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtContrasenia.Location = New System.Drawing.Point(292, 137)
-        Me.txtContrasenia.Name = "txtContrasenia"
-        Me.txtContrasenia.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtContrasenia.Size = New System.Drawing.Size(106, 22)
-        Me.txtContrasenia.TabIndex = 2
-        Me.txtContrasenia.UseSystemPasswordChar = True
-        '
-        'lblAceptar
-        '
-        Me.lblAceptar.BackColor = System.Drawing.Color.MidnightBlue
-        Me.lblAceptar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lblAceptar.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblAceptar.Location = New System.Drawing.Point(298, 194)
-        Me.lblAceptar.Name = "lblAceptar"
-        Me.lblAceptar.Size = New System.Drawing.Size(100, 40)
-        Me.lblAceptar.TabIndex = 3
-        Me.lblAceptar.Text = "Aceptar"
-        Me.lblAceptar.UseVisualStyleBackColor = False
-        '
-        'btnCancelar
-        '
-        Me.btnCancelar.BackColor = System.Drawing.Color.MidnightBlue
-        Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnCancelar.Location = New System.Drawing.Point(180, 194)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(100, 40)
-        Me.btnCancelar.TabIndex = 5
-        Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = False
-        '
-        'lbl_login
-        '
-        Me.lbl_login.AutoSize = True
-        Me.lbl_login.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lbl_login.Location = New System.Drawing.Point(253, 36)
-        Me.lbl_login.Name = "lbl_login"
-        Me.lbl_login.Size = New System.Drawing.Size(87, 32)
-        Me.lbl_login.TabIndex = 6
-        Me.lbl_login.Text = "LOGIN"
-        '
-        'Login
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(605, 322)
-        Me.Controls.Add(Me.lbl_login)
-        Me.Controls.Add(Me.btnCancelar)
-        Me.Controls.Add(Me.lblAceptar)
-        Me.Controls.Add(Me.txtContrasenia)
-        Me.Controls.Add(Me.txtUsuario)
-        Me.Controls.Add(Me.lbl_contrasenia)
-        Me.Controls.Add(Me.lbl_Nombre)
-        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Name = "Login"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Login"
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
+        lbl_Nombre = New Label()
+        lbl_contrasenia = New Label()
+        txtUsuario = New TextBox()
+        txtContrasenia = New TextBox()
+        lblAceptar = New Button()
+        btnCancelar = New Button()
+        lbl_login = New Label()
+        SuspendLayout()
+        ' 
+        ' lbl_Nombre
+        ' 
+        lbl_Nombre.AutoSize = True
+        lbl_Nombre.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        lbl_Nombre.Location = New Point(205, 98)
+        lbl_Nombre.Name = "lbl_Nombre"
+        lbl_Nombre.Size = New Size(67, 21)
+        lbl_Nombre.TabIndex = 0
+        lbl_Nombre.Text = "Usuario:"' 
+        ' lbl_contrasenia
+        ' 
+        lbl_contrasenia.AutoSize = True
+        lbl_contrasenia.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        lbl_contrasenia.Location = New Point(180, 138)
+        lbl_contrasenia.Name = "lbl_contrasenia"
+        lbl_contrasenia.Size = New Size(92, 21)
+        lbl_contrasenia.TabIndex = 1
+        lbl_contrasenia.Text = "Contraseña:"' 
+        ' txtUsuario
+        ' 
+        txtUsuario.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        txtUsuario.Location = New Point(292, 97)
+        txtUsuario.Name = "txtUsuario"
+        txtUsuario.Size = New Size(106, 22)
+        txtUsuario.TabIndex = 1
+        ' 
+        ' txtContrasenia
+        ' 
+        txtContrasenia.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        txtContrasenia.Location = New Point(292, 137)
+        txtContrasenia.Name = "txtContrasenia"
+        txtContrasenia.PasswordChar = "*"c
+        txtContrasenia.Size = New Size(106, 22)
+        txtContrasenia.TabIndex = 2
+        txtContrasenia.UseSystemPasswordChar = True
+        ' 
+        ' lblAceptar
+        ' 
+        lblAceptar.BackColor = Color.MidnightBlue
+        lblAceptar.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        lblAceptar.ForeColor = SystemColors.ButtonFace
+        lblAceptar.Location = New Point(298, 194)
+        lblAceptar.Name = "lblAceptar"
+        lblAceptar.Size = New Size(100, 40)
+        lblAceptar.TabIndex = 3
+        lblAceptar.Text = "Aceptar"
+        lblAceptar.UseVisualStyleBackColor = False
+        ' 
+        ' btnCancelar
+        ' 
+        btnCancelar.BackColor = Color.MidnightBlue
+        btnCancelar.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        btnCancelar.ForeColor = SystemColors.ButtonFace
+        btnCancelar.Location = New Point(180, 194)
+        btnCancelar.Name = "btnCancelar"
+        btnCancelar.Size = New Size(100, 40)
+        btnCancelar.TabIndex = 5
+        btnCancelar.Text = "Cancelar"
+        btnCancelar.UseVisualStyleBackColor = False
+        ' 
+        ' lbl_login
+        ' 
+        lbl_login.AutoSize = True
+        lbl_login.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point)
+        lbl_login.Location = New Point(253, 36)
+        lbl_login.Name = "lbl_login"
+        lbl_login.Size = New Size(87, 32)
+        lbl_login.TabIndex = 6
+        lbl_login.Text = "LOGIN"' 
+        ' Login
+        ' 
+        AutoScaleDimensions = New SizeF(6F, 13F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(605, 322)
+        Controls.Add(lbl_login)
+        Controls.Add(btnCancelar)
+        Controls.Add(lblAceptar)
+        Controls.Add(txtContrasenia)
+        Controls.Add(txtUsuario)
+        Controls.Add(lbl_contrasenia)
+        Controls.Add(lbl_Nombre)
+        Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Name = "Login"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Login"
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents lbl_Nombre As Label

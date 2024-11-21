@@ -22,62 +22,59 @@ Partial Class frmCompras
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.panelComprar = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.panelComprar.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'panelComprar
-        '
-        Me.panelComprar.Controls.Add(Me.Label3)
-        Me.panelComprar.Controls.Add(Me.Label2)
-        Me.panelComprar.Controls.Add(Me.Label1)
-        Me.panelComprar.Location = New System.Drawing.Point(30, 24)
-        Me.panelComprar.Name = "panelComprar"
-        Me.panelComprar.Size = New System.Drawing.Size(674, 380)
-        Me.panelComprar.TabIndex = 0
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(241, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(40, 15)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Precio"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(327, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 15)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Cantidad"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(423, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(32, 15)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Total"
-        '
-        'frmCompras
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(736, 450)
-        Me.Controls.Add(Me.panelComprar)
-        Me.Name = "frmCompras"
-        Me.Text = "Compras"
-        Me.panelComprar.ResumeLayout(False)
-        Me.panelComprar.PerformLayout()
-        Me.ResumeLayout(False)
-
+        panelComprar = New Panel()
+        Label3 = New Label()
+        Label2 = New Label()
+        Label1 = New Label()
+        panelComprar.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' panelComprar
+        ' 
+        panelComprar.Controls.Add(Label3)
+        panelComprar.Controls.Add(Label2)
+        panelComprar.Controls.Add(Label1)
+        panelComprar.Location = New Point(30, 24)
+        panelComprar.Name = "panelComprar"
+        panelComprar.Size = New Size(674, 380)
+        panelComprar.TabIndex = 0
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(423, 0)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(32, 15)
+        Label3.TabIndex = 2
+        Label3.Text = "Total"' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(241, 0)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(40, 15)
+        Label2.TabIndex = 1
+        Label2.Text = "Precio"' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(327, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(55, 15)
+        Label1.TabIndex = 0
+        Label1.Text = "Cantidad"' 
+        ' frmCompras
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(736, 450)
+        Controls.Add(panelComprar)
+        Name = "frmCompras"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Compras"
+        panelComprar.ResumeLayout(False)
+        panelComprar.PerformLayout()
+        ResumeLayout(False)
     End Sub
 
     Friend WithEvents panelComprar As Panel

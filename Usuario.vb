@@ -7,7 +7,7 @@ Public Class frmUsuario
 
     Dim connection As MySqlConnection = GetConnection()
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Form1_Load(sender As Object, e As EventArgs)
         '  Dim connection As MySqlConnection = GetConnection()bulrich
 
     End Sub
@@ -18,6 +18,7 @@ Public Class frmUsuario
         txtUsuario.Text = ""
         txtContrasenia.Text = ""
         Me.Close()
+        listUsuarios.Show()
     End Sub
 
     Private Sub btnGuardar_Click_1(sender As Object, e As EventArgs) Handles btnGuardar.Click
@@ -76,9 +77,13 @@ Public Class frmUsuario
         End If
     End Sub
 
-    Private Sub txtContrasenia_TextChanged(sender As Object, e As EventArgs) Handles txtContrasenia.TextChanged
+    Private Sub txtContrasenia_TextChanged(sender As Object, e As EventArgs)
         txtContrasenia.UseSystemPasswordChar = True
         txtContrasenia.PasswordChar = "*"
+
+    End Sub
+
+    Private Sub frmUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

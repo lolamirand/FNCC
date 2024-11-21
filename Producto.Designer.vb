@@ -22,185 +22,178 @@ Partial Class frmProducto
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.txtPrecio = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnCancelar = New System.Windows.Forms.Button()
-        Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.Lbl_foto = New System.Windows.Forms.Label()
-        Me.txtFoto = New System.Windows.Forms.TextBox()
-        Me.btn_examinar = New System.Windows.Forms.Button()
-        Me.pbImagen = New System.Windows.Forms.PictureBox()
-        Me.ofdSeleccionar = New System.Windows.Forms.OpenFileDialog()
-        Me.LabelStock = New System.Windows.Forms.Label()
-        Me.txtStock = New System.Windows.Forms.TextBox()
-        Me.lblTítulo = New System.Windows.Forms.Label()
-        Me.txtIdProducto = New System.Windows.Forms.TextBox()
-        CType(Me.pbImagen, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'txtNombre
-        '
-        Me.txtNombre.Location = New System.Drawing.Point(415, 64)
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(100, 23)
-        Me.txtNombre.TabIndex = 1
-        '
-        'txtPrecio
-        '
-        Me.txtPrecio.Location = New System.Drawing.Point(415, 136)
-        Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.Size = New System.Drawing.Size(100, 23)
-        Me.txtPrecio.TabIndex = 3
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(331, 62)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(71, 21)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Nombre:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(346, 134)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(56, 21)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Precio:"
-        '
-        'btnCancelar
-        '
-        Me.btnCancelar.BackColor = System.Drawing.Color.MidnightBlue
-        Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnCancelar.Location = New System.Drawing.Point(434, 221)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(100, 40)
-        Me.btnCancelar.TabIndex = 31
-        Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = False
-        '
-        'btnGuardar
-        '
-        Me.btnGuardar.BackColor = System.Drawing.Color.MidnightBlue
-        Me.btnGuardar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnGuardar.Location = New System.Drawing.Point(582, 221)
-        Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(100, 40)
-        Me.btnGuardar.TabIndex = 30
-        Me.btnGuardar.Text = "Guardar"
-        Me.btnGuardar.UseVisualStyleBackColor = False
-        '
-        'Lbl_foto
-        '
-        Me.Lbl_foto.AutoSize = True
-        Me.Lbl_foto.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Lbl_foto.Location = New System.Drawing.Point(358, 171)
-        Me.Lbl_foto.Name = "Lbl_foto"
-        Me.Lbl_foto.Size = New System.Drawing.Size(44, 21)
-        Me.Lbl_foto.TabIndex = 32
-        Me.Lbl_foto.Text = "Foto:"
-        '
-        'txtFoto
-        '
-        Me.txtFoto.Location = New System.Drawing.Point(415, 173)
-        Me.txtFoto.Name = "txtFoto"
-        Me.txtFoto.Size = New System.Drawing.Size(303, 23)
-        Me.txtFoto.TabIndex = 33
-        '
-        'btn_examinar
-        '
-        Me.btn_examinar.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.btn_examinar.Location = New System.Drawing.Point(724, 173)
-        Me.btn_examinar.Name = "btn_examinar"
-        Me.btn_examinar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_examinar.TabIndex = 34
-        Me.btn_examinar.Text = "..."
-        Me.btn_examinar.UseVisualStyleBackColor = False
-        '
-        'pbImagen
-        '
-        Me.pbImagen.Location = New System.Drawing.Point(37, 28)
-        Me.pbImagen.Name = "pbImagen"
-        Me.pbImagen.Size = New System.Drawing.Size(261, 216)
-        Me.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbImagen.TabIndex = 35
-        Me.pbImagen.TabStop = False
-        '
-        'ofdSeleccionar
-        '
-        Me.ofdSeleccionar.FileName = "OpenFileDialog1"
-        '
-        'LabelStock
-        '
-        Me.LabelStock.AutoSize = True
-        Me.LabelStock.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LabelStock.Location = New System.Drawing.Point(352, 97)
-        Me.LabelStock.Name = "LabelStock"
-        Me.LabelStock.Size = New System.Drawing.Size(50, 21)
-        Me.LabelStock.TabIndex = 36
-        Me.LabelStock.Text = "Stock:"
-        '
-        'txtStock
-        '
-        Me.txtStock.Location = New System.Drawing.Point(415, 99)
-        Me.txtStock.Name = "txtStock"
-        Me.txtStock.Size = New System.Drawing.Size(100, 23)
-        Me.txtStock.TabIndex = 2
-        '
-        'lblTítulo
-        '
-        Me.lblTítulo.AutoSize = True
-        Me.lblTítulo.BackColor = System.Drawing.Color.Transparent
-        Me.lblTítulo.Font = New System.Drawing.Font("Sitka Subheading", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblTítulo.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblTítulo.Location = New System.Drawing.Point(469, 9)
-        Me.lblTítulo.Name = "lblTítulo"
-        Me.lblTítulo.Size = New System.Drawing.Size(161, 30)
-        Me.lblTítulo.TabIndex = 38
-        Me.lblTítulo.Text = "Nuevo producto"
-        '
-        'txtIdProducto
-        '
-        Me.txtIdProducto.Location = New System.Drawing.Point(715, 16)
-        Me.txtIdProducto.Name = "txtIdProducto"
-        Me.txtIdProducto.Size = New System.Drawing.Size(100, 23)
-        Me.txtIdProducto.TabIndex = 39
-        Me.txtIdProducto.Visible = False
-        '
-        'frmProducto
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(838, 450)
-        Me.Controls.Add(Me.txtIdProducto)
-        Me.Controls.Add(Me.lblTítulo)
-        Me.Controls.Add(Me.txtStock)
-        Me.Controls.Add(Me.LabelStock)
-        Me.Controls.Add(Me.pbImagen)
-        Me.Controls.Add(Me.btn_examinar)
-        Me.Controls.Add(Me.txtFoto)
-        Me.Controls.Add(Me.Lbl_foto)
-        Me.Controls.Add(Me.btnCancelar)
-        Me.Controls.Add(Me.btnGuardar)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtPrecio)
-        Me.Controls.Add(Me.txtNombre)
-        Me.Name = "frmProducto"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmProducto"
-        CType(Me.pbImagen, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
+        txtNombre = New TextBox()
+        txtPrecio = New TextBox()
+        Label1 = New Label()
+        Label2 = New Label()
+        btnCancelar = New Button()
+        btnGuardar = New Button()
+        Lbl_foto = New Label()
+        txtFoto = New TextBox()
+        btn_examinar = New Button()
+        pbImagen = New PictureBox()
+        ofdSeleccionar = New OpenFileDialog()
+        LabelStock = New Label()
+        txtStock = New TextBox()
+        lblTítulo = New Label()
+        txtIdProducto = New TextBox()
+        CType(pbImagen, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' txtNombre
+        ' 
+        txtNombre.Location = New Point(411, 110)
+        txtNombre.Name = "txtNombre"
+        txtNombre.Size = New Size(100, 23)
+        txtNombre.TabIndex = 1
+        ' 
+        ' txtPrecio
+        ' 
+        txtPrecio.Location = New Point(411, 182)
+        txtPrecio.Name = "txtPrecio"
+        txtPrecio.Size = New Size(100, 23)
+        txtPrecio.TabIndex = 3
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Label1.Location = New Point(327, 108)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(71, 21)
+        Label1.TabIndex = 2
+        Label1.Text = "Nombre:"' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Label2.Location = New Point(342, 180)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(56, 21)
+        Label2.TabIndex = 3
+        Label2.Text = "Precio:"' 
+        ' btnCancelar
+        ' 
+        btnCancelar.BackColor = Color.MidnightBlue
+        btnCancelar.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        btnCancelar.ForeColor = SystemColors.ButtonFace
+        btnCancelar.Location = New Point(444, 296)
+        btnCancelar.Name = "btnCancelar"
+        btnCancelar.Size = New Size(100, 40)
+        btnCancelar.TabIndex = 31
+        btnCancelar.Text = "Cancelar"
+        btnCancelar.UseVisualStyleBackColor = False
+        ' 
+        ' btnGuardar
+        ' 
+        btnGuardar.BackColor = Color.MidnightBlue
+        btnGuardar.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        btnGuardar.ForeColor = SystemColors.ButtonFace
+        btnGuardar.Location = New Point(563, 296)
+        btnGuardar.Name = "btnGuardar"
+        btnGuardar.Size = New Size(100, 40)
+        btnGuardar.TabIndex = 30
+        btnGuardar.Text = "Guardar"
+        btnGuardar.UseVisualStyleBackColor = False
+        ' 
+        ' Lbl_foto
+        ' 
+        Lbl_foto.AutoSize = True
+        Lbl_foto.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Lbl_foto.Location = New Point(354, 217)
+        Lbl_foto.Name = "Lbl_foto"
+        Lbl_foto.Size = New Size(44, 21)
+        Lbl_foto.TabIndex = 32
+        Lbl_foto.Text = "Foto:"' 
+        ' txtFoto
+        ' 
+        txtFoto.Location = New Point(411, 219)
+        txtFoto.Name = "txtFoto"
+        txtFoto.Size = New Size(303, 23)
+        txtFoto.TabIndex = 33
+        ' 
+        ' btn_examinar
+        ' 
+        btn_examinar.BackColor = SystemColors.ActiveCaption
+        btn_examinar.Location = New Point(720, 219)
+        btn_examinar.Name = "btn_examinar"
+        btn_examinar.Size = New Size(75, 23)
+        btn_examinar.TabIndex = 34
+        btn_examinar.Text = "..."
+        btn_examinar.UseVisualStyleBackColor = False
+        ' 
+        ' pbImagen
+        ' 
+        pbImagen.Location = New Point(33, 74)
+        pbImagen.Name = "pbImagen"
+        pbImagen.Size = New Size(261, 216)
+        pbImagen.SizeMode = PictureBoxSizeMode.StretchImage
+        pbImagen.TabIndex = 35
+        pbImagen.TabStop = False
+        ' 
+        ' ofdSeleccionar
+        ' 
+        ofdSeleccionar.FileName = "OpenFileDialog1"' 
+        ' LabelStock
+        ' 
+        LabelStock.AutoSize = True
+        LabelStock.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        LabelStock.Location = New Point(348, 143)
+        LabelStock.Name = "LabelStock"
+        LabelStock.Size = New Size(50, 21)
+        LabelStock.TabIndex = 36
+        LabelStock.Text = "Stock:"' 
+        ' txtStock
+        ' 
+        txtStock.Location = New Point(411, 145)
+        txtStock.Name = "txtStock"
+        txtStock.Size = New Size(100, 23)
+        txtStock.TabIndex = 2
+        ' 
+        ' lblTítulo
+        ' 
+        lblTítulo.AutoSize = True
+        lblTítulo.BackColor = Color.Transparent
+        lblTítulo.Font = New Font("Sitka Subheading", 15.75F, FontStyle.Regular, GraphicsUnit.Point)
+        lblTítulo.ForeColor = SystemColors.ControlText
+        lblTítulo.Location = New Point(465, 55)
+        lblTítulo.Name = "lblTítulo"
+        lblTítulo.Size = New Size(161, 30)
+        lblTítulo.TabIndex = 38
+        lblTítulo.Text = "Nuevo producto"' 
+        ' txtIdProducto
+        ' 
+        txtIdProducto.Location = New Point(711, 62)
+        txtIdProducto.Name = "txtIdProducto"
+        txtIdProducto.Size = New Size(100, 23)
+        txtIdProducto.TabIndex = 39
+        txtIdProducto.Visible = False
+        ' 
+        ' frmProducto
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(838, 357)
+        Controls.Add(txtIdProducto)
+        Controls.Add(lblTítulo)
+        Controls.Add(txtStock)
+        Controls.Add(LabelStock)
+        Controls.Add(pbImagen)
+        Controls.Add(btn_examinar)
+        Controls.Add(txtFoto)
+        Controls.Add(Lbl_foto)
+        Controls.Add(btnCancelar)
+        Controls.Add(btnGuardar)
+        Controls.Add(Label2)
+        Controls.Add(Label1)
+        Controls.Add(txtPrecio)
+        Controls.Add(txtNombre)
+        Name = "frmProducto"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "frmProducto"
+        CType(pbImagen, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents txtNombre As TextBox

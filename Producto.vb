@@ -12,6 +12,7 @@ Public Class frmProducto
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Close()
+        listadoProducto.Show()
     End Sub
 
     Dim connection As MySqlConnection = GetConnection()
@@ -59,7 +60,7 @@ Public Class frmProducto
             End If
 
             If txtPrecio.Text = "" Then
-                MessageBox.Show("Por favor ingrese precio")
+                MessageBox.Show("Por favor ingrese el precio")
                 txtPrecio.Focus()
                 Exit Sub
             End If
@@ -102,7 +103,7 @@ Public Class frmProducto
             End If
 
             If txtPrecio.Text = "" Then
-                MessageBox.Show("Por favor ingrese precio")
+                MessageBox.Show("Por favor ingrese el precio")
                 txtPrecio.Focus()
                 Exit Sub
             End If
@@ -148,7 +149,7 @@ Public Class frmProducto
 
 
 
-    Private Sub txtFoto_TextChanged(sender As Object, e As EventArgs) Handles txtFoto.TextChanged
+    Private Sub txtFoto_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 End Class

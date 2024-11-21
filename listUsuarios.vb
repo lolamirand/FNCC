@@ -1,8 +1,8 @@
 ﻿
 
 Imports MySql.Data.MySqlClient
-        Imports MySql.Data
-        Imports FNCC.conectar
+Imports MySql.Data
+Imports FNCC.conectar
 Public Class listUsuarios
 
     Dim connection As MySqlConnection = GetConnection()
@@ -28,6 +28,7 @@ Public Class listUsuarios
 
         DataGridView1.DataSource = dataTable
         DataGridView1.AllowUserToAddRows = False
+        DataGridView1.Columns(0).Visible = False
 
         Dim ColCheck As DataGridViewCheckBoxColumn = New DataGridViewCheckBoxColumn()
         ColCheck.Name = "Opciones"
@@ -54,7 +55,6 @@ Public Class listUsuarios
                 frmUsuario.btnGuardar.Text = "Editar"
 
                 DataGridView1.Rows(i).Cells(2).Value = 0
-                '    Me.Close()
                 frmUsuario.Show()
             End If
         Next
@@ -91,12 +91,8 @@ Public Class listUsuarios
 
     Private Sub BtnNuevoProducto_Click(sender As Object, e As EventArgs) Handles BtnNuevoProducto.Click
         Me.Close()
-        frmUsuario.lblTitulo.Text = "Nuevo usuario"
+        frmUsuario.lblTitulo.Text = "SIGN UP"
         frmUsuario.btnGuardar.Text = "Guardar"
         frmUsuario.Show()
-    End Sub
-
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
     End Sub
 End Class

@@ -22,71 +22,70 @@ Partial Class listadoProducto
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(listadoProducto))
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.BtnNuevoProducto = New System.Windows.Forms.Button()
-        Me.btn_editar = New System.Windows.Forms.Button()
-        Me.btn_basura = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 51)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(776, 352)
-        Me.DataGridView1.TabIndex = 0
-        '
-        'BtnNuevoProducto
-        '
-        Me.BtnNuevoProducto.BackgroundImage = CType(resources.GetObject("BtnNuevoProducto.BackgroundImage"), System.Drawing.Image)
-        Me.BtnNuevoProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.BtnNuevoProducto.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.BtnNuevoProducto.Location = New System.Drawing.Point(591, 1)
-        Me.BtnNuevoProducto.Name = "BtnNuevoProducto"
-        Me.BtnNuevoProducto.Size = New System.Drawing.Size(58, 44)
-        Me.BtnNuevoProducto.TabIndex = 1
-        Me.BtnNuevoProducto.UseVisualStyleBackColor = True
-        '
-        'btn_editar
-        '
-        Me.btn_editar.BackgroundImage = CType(resources.GetObject("btn_editar.BackgroundImage"), System.Drawing.Image)
-        Me.btn_editar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btn_editar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btn_editar.Location = New System.Drawing.Point(656, 1)
-        Me.btn_editar.Name = "btn_editar"
-        Me.btn_editar.Size = New System.Drawing.Size(58, 44)
-        Me.btn_editar.TabIndex = 2
-        Me.btn_editar.UseVisualStyleBackColor = True
-        '
-        'btn_basura
-        '
-        Me.btn_basura.BackgroundImage = CType(resources.GetObject("btn_basura.BackgroundImage"), System.Drawing.Image)
-        Me.btn_basura.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btn_basura.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btn_basura.Location = New System.Drawing.Point(719, 1)
-        Me.btn_basura.Name = "btn_basura"
-        Me.btn_basura.Size = New System.Drawing.Size(58, 44)
-        Me.btn_basura.TabIndex = 3
-        Me.btn_basura.UseVisualStyleBackColor = True
-        '
-        'listadoProducto
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.btn_basura)
-        Me.Controls.Add(Me.btn_editar)
-        Me.Controls.Add(Me.BtnNuevoProducto)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Name = "listadoProducto"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "listadoProducto"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(listadoProducto))
+        DataGridView1 = New DataGridView()
+        BtnNuevoProducto = New Button()
+        btn_editar = New Button()
+        btn_basura = New Button()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' DataGridView1
+        ' 
+        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView1.Location = New Point(12, 63)
+        DataGridView1.Name = "DataGridView1"
+        DataGridView1.RowTemplate.Height = 25
+        DataGridView1.Size = New Size(623, 288)
+        DataGridView1.TabIndex = 0
+        ' 
+        ' BtnNuevoProducto
+        ' 
+        BtnNuevoProducto.BackgroundImage = CType(resources.GetObject("BtnNuevoProducto.BackgroundImage"), Image)
+        BtnNuevoProducto.BackgroundImageLayout = ImageLayout.Zoom
+        BtnNuevoProducto.ImageAlign = ContentAlignment.TopLeft
+        BtnNuevoProducto.Location = New Point(449, 13)
+        BtnNuevoProducto.Name = "BtnNuevoProducto"
+        BtnNuevoProducto.Size = New Size(58, 44)
+        BtnNuevoProducto.TabIndex = 1
+        BtnNuevoProducto.UseVisualStyleBackColor = True
+        ' 
+        ' btn_editar
+        ' 
+        btn_editar.BackgroundImage = CType(resources.GetObject("btn_editar.BackgroundImage"), Image)
+        btn_editar.BackgroundImageLayout = ImageLayout.Zoom
+        btn_editar.ImageAlign = ContentAlignment.TopLeft
+        btn_editar.Location = New Point(514, 13)
+        btn_editar.Name = "btn_editar"
+        btn_editar.Size = New Size(58, 44)
+        btn_editar.TabIndex = 2
+        btn_editar.UseVisualStyleBackColor = True
+        ' 
+        ' btn_basura
+        ' 
+        btn_basura.BackgroundImage = CType(resources.GetObject("btn_basura.BackgroundImage"), Image)
+        btn_basura.BackgroundImageLayout = ImageLayout.Zoom
+        btn_basura.ImageAlign = ContentAlignment.TopLeft
+        btn_basura.Location = New Point(577, 13)
+        btn_basura.Name = "btn_basura"
+        btn_basura.Size = New Size(58, 44)
+        btn_basura.TabIndex = 3
+        btn_basura.UseVisualStyleBackColor = True
+        ' 
+        ' listadoProducto
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(647, 363)
+        Controls.Add(btn_basura)
+        Controls.Add(btn_editar)
+        Controls.Add(BtnNuevoProducto)
+        Controls.Add(DataGridView1)
+        Name = "listadoProducto"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "listadoProducto"
+        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
