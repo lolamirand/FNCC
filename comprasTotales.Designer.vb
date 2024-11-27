@@ -22,30 +22,33 @@ Partial Class comprasTotales
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        DateTimePicker1 = New DateTimePicker()
-        DateTimePicker2 = New DateTimePicker()
+        fechaDesde = New DateTimePicker()
+        fechaHasta = New DateTimePicker()
         Label1 = New Label()
         Label2 = New Label()
         Panel1 = New Panel()
         btnBuscar = New Button()
+        dataGridTotales = New DataGridView()
         Panel1.SuspendLayout()
+        CType(dataGridTotales, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' DateTimePicker1
+        ' fechaDesde
         ' 
-        DateTimePicker1.Format = DateTimePickerFormat.Short
-        DateTimePicker1.Location = New Point(109, 31)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(99, 23)
-        DateTimePicker1.TabIndex = 0
+        fechaDesde.Format = DateTimePickerFormat.Short
+        fechaDesde.Location = New Point(109, 31)
+        fechaDesde.Name = "fechaDesde"
+        fechaDesde.Size = New Size(99, 23)
+        fechaDesde.TabIndex = 0
         ' 
-        ' DateTimePicker2
+        ' fechaHasta
         ' 
-        DateTimePicker2.Format = DateTimePickerFormat.Short
-        DateTimePicker2.Location = New Point(382, 31)
-        DateTimePicker2.Name = "DateTimePicker2"
-        DateTimePicker2.Size = New Size(99, 23)
-        DateTimePicker2.TabIndex = 1
+        fechaHasta.CustomFormat = "yyyy-MM-dd"
+        fechaHasta.Format = DateTimePickerFormat.Short
+        fechaHasta.Location = New Point(382, 31)
+        fechaHasta.Name = "fechaHasta"
+        fechaHasta.Size = New Size(99, 23)
+        fechaHasta.TabIndex = 1
         ' 
         ' Label1
         ' 
@@ -68,9 +71,9 @@ Partial Class comprasTotales
         Panel1.BorderStyle = BorderStyle.Fixed3D
         Panel1.Controls.Add(btnBuscar)
         Panel1.Controls.Add(Label2)
-        Panel1.Controls.Add(DateTimePicker1)
+        Panel1.Controls.Add(fechaDesde)
         Panel1.Controls.Add(Label1)
-        Panel1.Controls.Add(DateTimePicker2)
+        Panel1.Controls.Add(fechaHasta)
         Panel1.Location = New Point(59, 28)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(660, 100)
@@ -88,23 +91,35 @@ Partial Class comprasTotales
         btnBuscar.Text = "Buscar"
         btnBuscar.UseVisualStyleBackColor = False
         ' 
+        ' dataGridTotales
+        ' 
+        dataGridTotales.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dataGridTotales.Location = New Point(59, 134)
+        dataGridTotales.Name = "dataGridTotales"
+        dataGridTotales.RowTemplate.Height = 25
+        dataGridTotales.Size = New Size(660, 252)
+        dataGridTotales.TabIndex = 5
+        ' 
         ' comprasTotales
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(dataGridTotales)
         Controls.Add(Panel1)
         Name = "comprasTotales"
         Text = "comprasTotales"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        CType(dataGridTotales, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents fechaDesde As DateTimePicker
+    Friend WithEvents fechaHasta As DateTimePicker
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnBuscar As Button
+    Friend WithEvents dataGridTotales As DataGridView
 End Class
