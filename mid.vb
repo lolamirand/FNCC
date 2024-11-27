@@ -12,5 +12,15 @@
         frmCompras.Show()
     End Sub
 
+    Private Sub COMPRASPORDIAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles COMPRASPORDIAToolStripMenuItem.Click
+        comprasTotales.Show()
+    End Sub
 
+    Private Sub TOTALESToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TOTALESToolStripMenuItem.Click
+        ' frmTotales.Show()
+    End Sub
+
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+
+    End Sub
 End Class

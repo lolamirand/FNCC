@@ -26,12 +26,15 @@ Partial Class frmIngresar
         Me.usuario = New System.Windows.Forms.ToolStripMenuItem()
         Me.producto = New System.Windows.Forms.ToolStripMenuItem()
         Me.compras = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuStrip1.SuspendLayout
-        Me.SuspendLayout
+        Me.CONSULTASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.COMPRASPORDIAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TOTALESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1.SuspendLayout()
+        Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.usuario, Me.producto, Me.compras})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.usuario, Me.producto, Me.compras, Me.CONSULTASToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
@@ -55,6 +58,25 @@ Partial Class frmIngresar
         Me.compras.Name = "compras"
         Me.compras.Size = New System.Drawing.Size(75, 20)
         Me.compras.Text = "COMPRAS"
+        '
+        'CONSULTASToolStripMenuItem
+        '
+        Me.CONSULTASToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.COMPRASPORDIAToolStripMenuItem, Me.TOTALESToolStripMenuItem})
+        Me.CONSULTASToolStripMenuItem.Name = "CONSULTASToolStripMenuItem"
+        Me.CONSULTASToolStripMenuItem.Size = New System.Drawing.Size(83, 20)
+        Me.CONSULTASToolStripMenuItem.Text = "CONSULTAS"
+        '
+        'COMPRASPORDIAToolStripMenuItem
+        '
+        Me.COMPRASPORDIAToolStripMenuItem.Name = "COMPRASPORDIAToolStripMenuItem"
+        Me.COMPRASPORDIAToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.COMPRASPORDIAToolStripMenuItem.Text = "COMPRAS POR FECHA"
+        '
+        'TOTALESToolStripMenuItem
+        '
+        Me.TOTALESToolStripMenuItem.Name = "TOTALESToolStripMenuItem"
+        Me.TOTALESToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.TOTALESToolStripMenuItem.Text = "TOTALES"
         '
         'frmIngresar
         '
@@ -80,4 +102,7 @@ End Sub
     Friend WithEvents usuario As ToolStripMenuItem
     Friend WithEvents producto As ToolStripMenuItem
     Friend WithEvents compras As ToolStripMenuItem
+    Friend WithEvents CONSULTASToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents COMPRASPORDIAToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TOTALESToolStripMenuItem As ToolStripMenuItem
 End Class
