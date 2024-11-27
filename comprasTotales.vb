@@ -1,4 +1,7 @@
-﻿Public Class comprasTotales
+﻿Imports MySql.Data.MySqlClient
+Imports MySql.Data
+Imports FNCC.conectar
+Public Class comprasTotales
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
     End Sub
