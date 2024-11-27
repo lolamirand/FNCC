@@ -76,9 +76,16 @@ Public Class frmCompras
             Me.panelComprar.Controls.Add(compraTotal)
         End If
 
+        Dim btnCancelar As New Button
+        btnCancelar.SetBounds(varx, vary, 80, 40)
+        AddHandler btnCancelar.Click, Sub(senderObj, eventArgs)
 
+                                      End Sub
+        Dim btnAceptar As New Button
+        btnAceptar.SetBounds(varx, vary, 60, 40)
+        AddHandler btnAceptar.Click, Sub(senderObj, eventArgs)
+                                     End Sub
     End Sub
-
 
     ' Método para incrementar el valor del TextBox asociado al botón
     Private Sub IncrementarValor(textBoxCantidad As TextBox, txtBoxPrecio As TextBox, precioProducto As Integer)
@@ -137,7 +144,7 @@ Public Class frmCompras
         Next
 
         If compraTotal IsNot Nothing Then
-            compraTotal.Text = (totalCompra).ToString("F2")
+            compraTotal.Text = (totalCompra)
         End If
 
 
